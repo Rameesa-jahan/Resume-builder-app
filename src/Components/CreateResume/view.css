@@ -1,0 +1,55 @@
+body{
+    background-color: white;
+}
+.view-container{
+    margin: auto;
+}
+.view-header{
+    padding: 40px;
+}
+.view-main-header{
+    display: flex;
+    width: 100%;
+    background-color: rgba(0, 0, 255, 0.514);
+    color: white;
+    margin-left: 0;
+    line-height: 5px;
+    padding: 10px;
+    justify-content: space-between;
+}
+.address-view{
+  text-align: right;
+  padding: 15px 10px 10px 10px;
+}
+
+.education-details{
+    width: 100%;
+    padding: 20px;
+}
+.education-view{
+    width: 100%;
+}
+.experience-details{
+    width: 100%;
+    padding: 20px;
+}
+.experience-view{
+    width: 100%;
+}
+.skills-all{
+    width: 100%;
+    padding: 20px;
+}
+.skills-view{
+    width: 100%;
+}
+.head-3{
+    width: 200px;
+}
+.lang-all{
+    width: 100%;
+    padding: 20px;
+}
+.lang-view{
+    width: 100%;
+}

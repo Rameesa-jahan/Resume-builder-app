@@ -1,0 +1,35 @@
+
+.container{
+    margin: auto;
+}
+.add-btn{
+    padding: 7px;
+    color: rgb(255, 255, 255);
+    background-color: rgba(0, 0, 255, 0.514);
+    border: none;
+    border-radius: 3px;
+    margin-top: 32px;
+    margin-bottom: 17px;
+}
+.Add-sl{
+    padding: 7px;
+    color: rgb(255, 255, 255);
+    background-color: rgba(0, 0, 255, 0.514);
+    border: none;
+    border-radius: 3px; 
+}
+.header{
+    padding: 15px 0px 15px 0px;
+    text-align: left;
+}
+.Create-btn{
+    padding: 15px;
+    background-color: rgba(0, 0, 255, 0.514);
+    border: none;
+    border-radius: 5px;
+    width: 100%;
+    color: white;
+}
+.bottom-btn{
+    margin: 15px 0px 10px 0px;
+}
