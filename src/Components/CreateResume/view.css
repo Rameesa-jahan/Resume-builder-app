@@ -53,3 +53,11 @@ body{
 .lang-view{
     width: 100%;
 }
+.button-pdf{
+    padding: 15px;
+    background-color: rgba(0, 0, 255, 0.514);
+    border: none;
+    border-radius: 5px;
+    width: 100%;
+    color: white; 
+}

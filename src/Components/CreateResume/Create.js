@@ -1,7 +1,9 @@
-import React, { useState } from "react";
+import React, { useState ,useRef} from "react";
 import { Link } from "react-router-dom";
 import "./createResume.css";
-import './view.css'
+import './view.css';
+import jsPDF from "jspdf";
+
 
 function Create() {
   const [isView, setIsView] = useState(false);
@@ -35,6 +37,8 @@ function Create() {
 
   const [allLang, setAllLang] = useState([]);
   const [lang, setLang] = useState({lang:" "});
+
+  const createref = useRef(null);
 
   const handleInputChange = (e) => {
     const { name, value } = e.target;
@@ -110,6 +114,22 @@ function Create() {
     temp.push(details);
     setAllDetails([...temp]);
     setIsView(true);
+  };
+
+  const handleGenerate = () => {
+    const doc = new jsPDF({
+      orientation: "landscape",
+      unit: "px",
+      format: "a2",
+    });
+
+    doc.setFont("Integer-Regular", "normal");
+
+    doc.html(createref.current, {
+      async callback(doc) {
+        await doc.save("document");
+      },
+    });
   };
  
   return (
@@ -444,8 +464,10 @@ function Create() {
             })}
                
           </div>
+          <button className="button-pdf" onClick={handleGenerate}> Generate PDF</button>
         </div>
       )}
+     
     </div>
   );
 }
