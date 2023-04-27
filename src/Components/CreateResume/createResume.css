@@ -1,4 +1,7 @@
-
+*{
+   background-color: black;
+   color: white; 
+}
 .container{
     margin: auto;
 }

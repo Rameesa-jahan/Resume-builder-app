@@ -24,9 +24,8 @@ function App() {
   return (
     <div>
       <div ref={createref}>
-        <Create />
+        <Create handleGenerate={handleGenerate} />
       </div>
-      <button onClick={handleGenerate}> Generate PDF</button>
     </div>
   );
 }

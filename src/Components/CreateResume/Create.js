@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import "./createResume.css";
 import './view.css'
 
-function Create() {
+function Create({handleGenerate}) {
   const [isView, setIsView] = useState(false);
   const [allDetails, setAllDetails] = useState([]);
   const [details, setDetails] = useState({
@@ -361,14 +361,14 @@ function Create() {
             return (
               <div className="view-main-header">
                 <div className="view-header">
-                  <h3> {details?.name} </h3>
-                  <h4> {details?.profession} </h4>
+                  <h3 className='head-clr'> {details?.name} </h3>
+                  <h4 className='head-clr'> {details?.profession} </h4>
                 </div>
                 <div className="address-view">
-                  <h6> {details?.email} </h6> <br />
-                  <h6> {details?.phone} </h6> <br />
-                  <h6> {details?.address} </h6> <br />
-                  <h6>
+                  <h6 className='head-clr'> {details?.email} </h6> <br />
+                  <h6 className='head-clr'> {details?.phone} </h6> <br />
+                  <h6 className='head-clr'> {details?.address} </h6> <br />
+                  <h6 className='head-clr'>
                     {" "}
                     {details.state} | {details.zip}{" "}
                   </h6>{" "}
@@ -386,7 +386,7 @@ function Create() {
                   <div class="card">
                     <div class="card-body">
                       <h5 class="card-title"> {education?.course} </h5>
-                      <h6 class="card-subtitle mb-2 text-muted">
+                      <h6 class="card-subtitle mb-2">
                         {" "}
                         {education?.institution}
                       </h6>
@@ -406,11 +406,11 @@ function Create() {
                   <div class="card">
                     <div class="card-body">
                       <h5 class="card-title"> {experience?.role} </h5>
-                      <h6 class="card-subtitle mb-2 text-muted">
+                      <h6 class="card-subtitle mb-2">
                         {" "}
                         {experience?.company}
                       </h6>
-                      <h6> {experience?.year} </h6>
+                      <h6> {experience?.duration} Years</h6>
                     </div>
                   </div>
                 </div>
@@ -422,9 +422,9 @@ function Create() {
             <h3 className="head-3"> Skills</h3>
             { allSkills.map((skill)=>{
               return(
-                <div className="skills-view">
-                  <ul class="list-group">
-                    <li class="list-group-item"> {skill.skills} </li>
+                <div>
+                  <ul>
+                    <li> {skill.skills} </li>
                   </ul>
                 </div>
               )
@@ -436,14 +436,15 @@ function Create() {
             {allLang.map((langs)=>{
               return(
                  <div className="lang-view">
-                  <ul class="list-group">
-                    <li class="list-group-item"> {langs.lang} </li>
+                  <ul>
+                    <li> {langs.lang} </li>
                   </ul>
                 </div>
               )
             })}
                
           </div>
+          <button className="Create-btn" onClick={handleGenerate}> Generate PDF</button>
         </div>
       )}
     </div>

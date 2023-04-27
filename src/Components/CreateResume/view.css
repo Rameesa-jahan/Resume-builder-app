@@ -6,20 +6,25 @@ body{
 }
 .view-header{
     padding: 40px;
+    background-color: rgb(8, 8, 117)
 }
 .view-main-header{
     display: flex;
     width: 100%;
-    background-color: rgba(0, 0, 255, 0.514);
+    background-color: rgb(8, 8, 117); 
     color: white;
     margin-left: 0;
     line-height: 5px;
     padding: 10px;
     justify-content: space-between;
 }
+.head-clr{
+    background-color: rgb(8, 8, 117); 
+}
 .address-view{
   text-align: right;
   padding: 15px 10px 10px 10px;
+  background-color: rgb(8, 8, 117)
 }
 
 .education-details{
